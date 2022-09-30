@@ -17,7 +17,7 @@ function getTotalCostsBalance() {
     // Total Expenses
     const totalExpenses = foodCostsValue + rentCostsValue + clothesCostsValue;
 
-
+    // Error Handling
     if (income < 0) {
         expensesField.innerText = 'Please Write A Number Greater Than 0 In Your Income Input Field';
     }
@@ -54,10 +54,40 @@ function getTotalCostsBalance() {
 
 
 };
+// Saving Field
+function getSaveingMoney() {
+
+    //Saving Amount
+    const inputSave = document.getElementById('save');
+    const save = parseFloat(inputSave.value);
+    // Total Income
+    const inputIncome = document.getElementById('income');
+    const income = parseFloat(inputIncome.value);
+    // Balance Field
+    const balanceField = document.getElementById('balance-field');
+    const balance = parseFloat(balanceField.innerText);
+    // Saving Field
+    const savingField = document.getElementById('saving-field');
+    // Remaining Field
+    const remainingField = document.getElementById('remaining-field');
+
+    const savingAmount = (save * income) / 100;
+    savingField.innerText = savingAmount;
+
+    const remainingBalance = balance - savingAmount;
+    remainingField.innerText = remainingBalance;
+
+
+
+}
 
 
 // Calculate Button
 document.getElementById('calculate-button').addEventListener('click', function () {
     getTotalCostsBalance();
 
+});
+// Save Button
+document.getElementById('save-button').addEventListener('click', function () {
+    getSaveingMoney();
 });
