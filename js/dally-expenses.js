@@ -57,7 +57,7 @@ function getTotalCostsBalance() {
 // Saving Field
 function getSaveingMoney() {
 
-    //Saving Amount
+    // Savings
     const inputSave = document.getElementById('save');
     const save = parseFloat(inputSave.value);
     // Total Income
@@ -70,12 +70,27 @@ function getSaveingMoney() {
     const savingField = document.getElementById('saving-field');
     // Remaining Field
     const remainingField = document.getElementById('remaining-field');
-
+    // Savings Amount
     const savingAmount = (save * income) / 100;
-    savingField.innerText = savingAmount;
 
-    const remainingBalance = balance - savingAmount;
-    remainingField.innerText = remainingBalance;
+    // Error Handling
+    if (savingAmount > balance) {
+        savingField.innerText = "Your account haven't enough money";
+    }
+    else if (save < 0) {
+        savingField.innerText = "Please write a number greater than 0 in your save input field";
+    }
+    else if (isNaN(save)) {
+        savingField.innerText = 'Please write a number in your save input field';
+    }
+    else {
+
+        savingField.innerText = savingAmount;
+
+        const remainingBalance = balance - savingAmount;
+        remainingField.innerText = remainingBalance;
+    }
+
 
 
 
