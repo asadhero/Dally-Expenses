@@ -75,7 +75,7 @@ function getSaveingMoney() {
 
     // Error Handling
     if (savingAmount > balance) {
-        savingField.innerText = "Your account haven't enough money";
+        savingField.innerText = "Your account haven't enough money for savings";
     }
     else if (save < 0) {
         savingField.innerText = "Please write a number greater than 0 in your Save input field";
