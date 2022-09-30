@@ -19,31 +19,31 @@ function getTotalCostsBalance() {
 
     // Error Handling
     if (income < 0) {
-        expensesField.innerText = 'Please Write A Number Greater Than 0 In Your Income Input Field';
+        expensesField.innerText = 'Please write a number greater than 0 in your Income input field';
     }
     else if (totalExpenses > income) {
-        expensesField.innerText = 'Your Expenses Is Over Than Your Income';
+        expensesField.innerText = 'Your expenses is over than your income';
     }
     else if (foodCostsValue < 0) {
-        expensesField.innerText = 'Please Write A Number Greater Than 0 In Your Food Input Field';
+        expensesField.innerText = 'Please write a number greater than 0 in your Food input field';
     }
     else if (rentCostsValue < 0) {
-        expensesField.innerText = 'Please Write A Number Greater Than 0 In Your Rent Input Field';
+        expensesField.innerText = 'Please write a number greater than 0 in your Rent input field';
     }
     else if (clothesCostsValue < 0) {
-        expensesField.innerText = 'Please Write A Number Greater Than 0 In Your Clothes Input Field';
+        expensesField.innerText = 'Please write a number greater than 0 in your Clothes input field';
     }
     else if (isNaN(foodCostsValue)) {
-        expensesField.innerText = 'Please Write A Number In Your Food Input Field';
+        expensesField.innerText = 'Please write a number in your Food input field';
     }
     else if (isNaN(rentCostsValue)) {
-        expensesField.innerText = 'Please Write A Number In Your Rent Input Field';
+        expensesField.innerText = 'Please write a number in your Rent input field';
     }
     else if (isNaN(clothesCostsValue)) {
-        expensesField.innerText = 'Please Write A Number In Your Clothes Input Field';
+        expensesField.innerText = 'Please write a number in your Clothes input field';
     }
     else if (isNaN(income)) {
-        expensesField.innerText = 'Please Write A Number In Your Income Input Field';
+        expensesField.innerText = 'Please write a number in your Income input field';
     }
     else {
         expensesField.innerText = totalExpenses;
@@ -78,10 +78,10 @@ function getSaveingMoney() {
         savingField.innerText = "Your account haven't enough money";
     }
     else if (save < 0) {
-        savingField.innerText = "Please write a number greater than 0 in your save input field";
+        savingField.innerText = "Please write a number greater than 0 in your Save input field";
     }
     else if (isNaN(save)) {
-        savingField.innerText = 'Please write a number in your save input field';
+        savingField.innerText = 'Please write a number in your Save input field';
     }
     else {
 
