@@ -26,7 +26,9 @@ function getTotalCostsBalance() {
     }
     else if (foodCostsValue < 0) {
         expensesField.innerText = 'Please write a number greater than 0 in your Food input field';
+
     }
+
     else if (rentCostsValue < 0) {
         expensesField.innerText = 'Please write a number greater than 0 in your Rent input field';
     }
